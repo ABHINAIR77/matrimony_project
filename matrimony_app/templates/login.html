@@ -1,43 +1,78 @@
-<form class="form-horizontal" method="post">
-<fieldset>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
-
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Form Name -->
-<legend>Form Name</legend>
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="username">Text Input</label>
-  <div class="col-md-4">
-  <input id="username" name="username" type="text" placeholder="user name" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
+﻿{% extends 'app.html' %}
+{% block content %}
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+   <div class="container">
+		<div class="w3l_agileits_breadcrumbs_inner">
+			<ul>
+				<li><a href="index.html">Home</a><span>&#187;</span></li>
+									
+				<li>Login</li>
+				</ul>
+		</div>
+	</div>
 </div>
-
-    <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="password">Text Input</label>
-  <div class="col-md-4">
-  <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
-  <span class="help-block matrimonial-help-block">help</span>
-  </div>
+<!-- //breadcrumbs -->
+<div class="login elite-app">
+	<div class="container">
+	<div class="tittle-agileinfo">
+				<h3>Login Now</h3>
+			</div>
+	<div class="col-md-8 login-form-w3-agile">
+			 <form action="#" method="post">
+				<div class="w3_form_body_grid">
+					<span>Name</span>
+					<input type="email" name="Email" placeholder="Email" required="">
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Password</span>
+					<input type="password" name="Password" placeholder="Password" required="">
+				</div>
+				<div class="agile_remember">
+					<div class="agile_remember_left">
+						<div class="check">
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>remember me</label>
+						</div>
+					</div>
+					<div class="agile_remember_right">
+						<a href="#">Forgot Password?</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<input type="submit" value="Sign In">
+			</form>
+			<h4>Continue With</h4>
+			<div class="social_icons agileinfo_social_asd">
+				<!-- Facebook -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">5 Likes</div>
+					<div class="facebook icon"> <i class="fa fa-facebook" aria-hidden="true"></i> </div>
+					<div class="facebook slide">
+						<p>Facebook</p>
+					</div>
+				</a>
+				<!-- Twitter -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">8 Tweets</div>
+					<div class="twitter icon"> <i class="fa fa-twitter" aria-hidden="true"></i> </div>
+					<div class="twitter slide">
+						<p>Twitter</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 login-right-info">
+			<h3 class="subhead-agileits">Why Join Elite Match</h3>
+			<p class="para-agileits-w3layouts" >Some Features</p>
+			<ul>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Members from all over the world</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Verified profile</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>matched by horoscope</li>
+			</ul>
+			<h5>Don't have an account?<i class="fa fa-hand-o-down" aria-hidden="true"></i></h5>
+			<div class="sim-button button12"><a href="register.html">Register</a></div>
+		</div>
+	</div>
 </div>
-
-<!-- Button -->
-<div class="form-group">
-  <div class="col-md-offset-4 col-md-4">
-    <button id="singlebutton" name="login" class="btn btn-primary" type="submit">login</button>
-  </div>
-</div>
-
-
-</fieldset>
-</form>
+<!--login-inner-->
+{% endblock %}

@@ -1,0 +1,4 @@
+
+
+class Preference(Model):
+    pass

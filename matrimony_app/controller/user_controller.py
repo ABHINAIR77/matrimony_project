@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from pprint import pprint as pp
 from matrimony_app.models.User import User
 
@@ -24,6 +24,7 @@ class UserController:
                 # @todo redirect to home page
                 return "Login Successful"
             else:
+                flash('Invalid email or password','error')
                 return redirect(url_for("login"))
 
 
